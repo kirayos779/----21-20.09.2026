@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println("Названия: double");
         System.out.println("Рaзмер: " + Double.BYTES);
-        System.out.println("Минимум: " + Double.MIN_VALUE);
+        System.out.println("Минимум: " + (-Double.MAX_VALUE));
         System.out.println("Максимум: " + Double.MAX_VALUE);
 
         System.out.println("Названия: long");
@@ -27,6 +27,13 @@ public class Main {
         System.out.println("Минимум: " + Byte.MIN_VALUE);
         System.out.println("Максимум: " + Byte.MAX_VALUE);
 
+        System.out.println("Названия: char");
+        System.out.println("Рaзмер: " + Character.BYTES);
+        System.out.println("Минимум: " + (int)Character.MIN_VALUE);
+        System.out.println("Максимум: " + (int)Character.MAX_VALUE);
+
+        System.out.println("Названия: boolean");
+        System.out.println("Возможные значения: true, false");
 
         Scanner scanner = new Scanner(System.in);
 
