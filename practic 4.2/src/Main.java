@@ -1,24 +1,31 @@
 import java.util.Scanner;
 
-public class Main  {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Введите текст: ");
+
+        System.out.print("Введіть текст: ");
         String text = sc.nextLine();
 
-        int countWhile = 0;
+        int count = 0;
         int i = 0;
         while (i < text.length()) {
             char ch = text.charAt(i);
             if (ch == '.' || ch == '!' || ch == '?') {
-                countWhile++;
-                while (i+1 < text.length() && (text.charAt(i+1) == '.' ||  text.charAt(i+1) == '!' ||  text.charAt(i+1) == '?')) {
+                count++;
+
+                while (i + 1 < text.length() && isEnd(text.charAt(i + 1))) {
                     i++;
                 }
             }
             i++;
         }
-        System.out.println("Кількість речень: " + countWhile);
+
+        System.out.println("Кількість речень: " + count);
         sc.close();
+    }
+
+    private static boolean isEnd(char ch) {
+        return ch == '.' || ch == '!' || ch == '?';
     }
 }
