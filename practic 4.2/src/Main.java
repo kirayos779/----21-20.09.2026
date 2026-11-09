@@ -11,7 +11,7 @@ public class Main {
         int i = 0;
         while (i < text.length()) {
             char ch = text.charAt(i);
-            if (ch == '.' || ch == '!' || ch == '?') {
+            if (ch == '.' || ch == ' ! ' || ch == '?') {
                 count++;
 
                 while (i + 1 < text.length() && isEnd(text.charAt(i + 1))) {
